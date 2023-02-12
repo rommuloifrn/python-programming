@@ -16,8 +16,9 @@ while True:
     else:
         print("Escreve direito, chimpa.\n")
 
-    pLing, pMat, pHum, pNat, pRed, totalpesos = map(float, pesos.split(" "))
+    pLing, pMat, pHum, pNat, pRed = map(float, pesos.split(" "))
     nLing, nHum, nNat, nMat, nRed = map(float, notas.split(" "))
+    totalpesos = pLing + pMat + pHum + pNat + pRed
 
     print("Sua nota com os pesos é", (nLing*pLing+nMat*pMat+nHum*pHum+nNat*pNat+nRed*pRed)/totalpesos)
     resposta = input("Deseja fazer outra operação? Sim = 1, Não = 0\n")
